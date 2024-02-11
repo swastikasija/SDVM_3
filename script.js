@@ -2,7 +2,7 @@ const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-
+  slidesPerView: 2,
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
@@ -18,4 +18,12 @@ const swiper = new Swiper('.swiper', {
   scrollbar: {
     el: '.swiper-scrollbar',
   },
+  autoplay: {
+    delay: 1000,
+    disableOnInteraction: false, 
+  },
 });
+
+const redirect = () => {
+  window.location.href = './sports.html'
+}

@@ -19,7 +19,12 @@
       background: #111827;
     }
 
-    .swiper {
+    .swiper-slide img {
+      height: 300px;
+      width: 350px;
+    }
+
+    /* .swiper {
       color: white;
       width: 100%;
       height: 500px;
@@ -34,16 +39,12 @@
     .swiper-slide img {
       height: 100%;
       width: 100%;
-    }
+    } */
   </style>
   <header class="text-gray-400 bg-gray-900 body-font">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
       <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
-          viewBox="0 0 24 24">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-        </svg>
+        <img src="./img/logo.png" class="w-10 h-10 text-white rounded-full">
         <span class="ml-3 text-xl">SDVM</span>
       </a>
       <nav
@@ -70,10 +71,11 @@
             Join us and discover the journey to success today.
           </p>
           <div class="flex justify-center">
-            <button
-              class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-            <button
-              class="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">Button</button>
+            <button onclick="redirect()"
+              class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">View</button>
+            <button onclick="redirect()"
+              class="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">Learn
+              more</button>
           </div>
         </div>
         <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -94,7 +96,8 @@
           </div>
           <div class="flex flex-col sm:flex-row mt-10">
             <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-              <div class="w-20 h-20 overflow-hidden rounded-full inline-flex items-center justify-center bg-gray-800 text-gray-600">
+              <div
+                class="w-20 h-20 overflow-hidden rounded-full inline-flex items-center justify-center bg-gray-800 text-gray-600">
                 <!-- <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   class="w-10 h-10" viewBox="0 0 24 24">
                   <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
@@ -197,15 +200,15 @@
                   d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
                 </path>
               </svg>
-              <p class="leading-relaxed mb-6">Synth chartreuse iPhone lomo cray raw denim brunch everyday carry neutra
-                before they sold out fixie 90's microdosing. Tacos pinterest fanny pack venmo, post-ironic heirloom
-                try-hard pabst authentic iceland.</p>
+              <p class="leading-relaxed mb-6">Attending this school has been a transformative journey for me. The
+                teachers not only educate but also inspire us to pursue our passions and strive for excellence. I've
+                made lifelong friends and memories here.</p>
               <a class="inline-flex items-center">
-                <img alt="testimonial" src="https://dummyimage.com/106x106"
+                <img alt="testimonial" src="./img/girl.jpg"
                   class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
                 <span class="flex-grow flex flex-col pl-4">
-                  <span class="title-font font-medium text-white">Holden Caulfield</span>
-                  <span class="text-gray-500 text-sm">UI DEVELOPER</span>
+                  <span class="title-font font-medium text-white">Sarah</span>
+                  <span class="text-gray-500 text-sm">Grade 10</span>
                 </span>
               </a>
             </div>
@@ -218,15 +221,15 @@
                   d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
                 </path>
               </svg>
-              <p class="leading-relaxed mb-6">Synth chartreuse iPhone lomo cray raw denim brunch everyday carry neutra
-                before they sold out fixie 90's microdosing. Tacos pinterest fanny pack venmo, post-ironic heirloom
-                try-hard pabst authentic iceland.</p>
+              <p class="leading-relaxed mb-6">“Choosing this school for our child has been one of the best decisions
+                we've made. The nurturing environment and dedicated teachers have helped our child flourish academically
+                and personally. We couldn't be happier with our experience.</p>
               <a class="inline-flex items-center">
-                <img alt="testimonial" src="https://dummyimage.com/107x107"
+                <img alt="testimonial" src="./img/girl2.jpg"
                   class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
                 <span class="flex-grow flex flex-col pl-4">
-                  <span class="title-font font-medium text-white">Alper Kamu</span>
-                  <span class="text-gray-500 text-sm">DESIGNER</span>
+                  <span class="title-font font-medium text-white">Sneh Asija</span>
+                  <span class="text-gray-500 text-sm">Business Woman</span>
                 </span>
               </a>
             </div>
@@ -241,12 +244,13 @@
       <div class="container px-5 py-24 mx-auto flex flex-col">
         <div class="lg:w-4/6 mx-auto">
           <div class=" overflow-hidden flex justify-center">
-            <img alt="content" class="w-[28rem] h-[25rem] rounded-lg" src="https://sdvmcityschool.org/images/team/chairman.jpg?ver=2"
-              width="100%">
+            <img alt="content" class="w-[28rem] h-[25rem] rounded-lg"
+              src="https://sdvmcityschool.org/images/team/chairman.jpg?ver=2" width="100%">
           </div>
           <div class="flex flex-col sm:flex-row mt-10">
             <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-              <div class="w-20 h-20 rounded-full inline-flex items-center overflow-hidden justify-center bg-gray-800 text-gray-600">
+              <div
+                class="w-20 h-20 rounded-full inline-flex items-center overflow-hidden justify-center bg-gray-800 text-gray-600">
                 <!-- <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   class="w-10 h-10" viewBox="0 0 24 24">
                   <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
@@ -266,10 +270,34 @@
             </div>
             <div
               class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-800 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
-              <p class="leading-relaxed text-lg mb-4">S.D.V.M. City is a symphony that celebrates the confluence of many tunes- of talent with opportunity, of intellect with diligence, of fun with learning. It is a sea in which children are flourishing, carving their own niche and honing themselves in its variegated waters. The world around us is changing but that does not mean we have to abandon old values that have helped create the wonderful environment that is established at S.D.V.M. City.</p>
+              <p class="leading-relaxed text-lg mb-4">S.D.V.M. City is a symphony that celebrates the confluence of many
+                tunes- of talent with opportunity, of intellect with diligence, of fun with learning. It is a sea in
+                which children are flourishing, carving their own niche and honing themselves in its variegated waters.
+                The world around us is changing but that does not mean we have to abandon old values that have helped
+                create the wonderful environment that is established at S.D.V.M. City.</p>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+    <section>
+      <!-- Slider main container -->
+      <div class="swiper w-[80%] mb-12">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper gap-4">
+          <!-- Slides -->
+          <div class="swiper-slide flex justify-center"><img src="./img/1.jpg" alt=""></div>
+          <div class="swiper-slide flex justify-center"><img src="./img/3.jpg" alt=""></div>
+          <div class="swiper-slide flex justify-center"><img src="./img/4.jpg" alt=""></div>
+          <div class="swiper-slide flex justify-center"><img src="./img/5.jpg" alt=""></div>
+          <div class="swiper-slide flex justify-center"><img src="./img/5.jpg" alt=""></div>
+          <div class="swiper-slide flex justify-center"><img src="./img/6.jpg" alt=""></div>
+          <div class="swiper-slide flex justify-center"><img src="./img/7.jpg" alt=""></div>
+          <div class="swiper-slide flex justify-center"><img src="./img/9.jpg" alt=""></div>
+          <div class="swiper-slide flex justify-center"><img src="./img/10.jpg" alt=""></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </section>
     <section class="text-gray-400 bg-gray-900 body-font relative">
@@ -305,11 +333,8 @@
         class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
           <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
-              stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
-              viewBox="0 0 24 24">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
+            <img src="./img/logo.png" class="w-10 h-10 text-white bg-indigo-500 rounded-full">
+            </img>
             <span class="ml-3 text-xl">SDVM</span>
           </a>
           <p class="mt-2 text-sm text-gray-500">Air plant banjo lyft occupy retro adaptogen indego</p>
