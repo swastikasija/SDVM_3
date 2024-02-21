@@ -27,3 +27,4 @@ const swiper = new Swiper('.swiper', {
 const redirect = () => {
   window.location.href = './sports.html'
 }
+console.log("Hello World");
